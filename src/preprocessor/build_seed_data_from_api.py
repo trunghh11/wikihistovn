@@ -14,14 +14,20 @@ NGUYEN_DYNASTY_KINGS_NAMES = [
 API_URL = "https://vi.wikipedia.org/w/api.php"
 HEADERS = {
     # Cung cấp User-Agent là một thông lệ tốt khi dùng API
-    "User-Agent": "VietnameseHistoryNetwork/1.0 (Project for university; contact: your_email@example.com)"
+    "User-Agent": "VietnameseHistoryNetwork/1.0 (Project for university; contact: 22024527@vnu.edu.vn)"
 }
 
-def extract_infobox_data(wikicode):
+def extract_infobox_data(wikicode, title):
     """Trích xuất dữ liệu từ template Infobox đầu tiên tìm thấy."""
-    infoboxes = wikicode.filter_templates(matches=lambda t: 'infobox' in t.name.lower())
+    # In danh sách template để kiểm tra
+    templates = wikicode.filter_templates()
+    print(f"Templates found in {title}: {[t.name for t in templates]}")
+
+    # Tìm Infobox (mở rộng điều kiện để bao gồm các tên template khác)
+    infoboxes = wikicode.filter_templates(matches=lambda t: 'infobox' in t.name.lower() or 'thông tin nhân vật hoàng gia' in t.name.lower())
     if not infoboxes:
-        return None
+        print(f"⚠️ Không tìm thấy Infobox trong trang '{title}'.")
+        return {}  # Trả về dictionary rỗng nếu không tìm thấy Infobox
     
     infobox = infoboxes[0]
     data = {}
@@ -68,6 +74,7 @@ def build_seed_data_from_api(king_names, output_path):
         # Lấy nội dung wikitext từ response
         wikitext = page.get("revisions", [{}])[0].get("content", "")
         if not wikitext:
+            print(f"⚠️ Trang '{page.get('title')}' không có nội dung.")
             continue
             
         page_id = page.get("pageid")
@@ -77,13 +84,13 @@ def build_seed_data_from_api(king_names, output_path):
         wikicode = mwparserfromhell.parse(wikitext)
         
         # Trích xuất infobox và links
-        infobox = extract_infobox_data(wikicode)
+        infobox = extract_infobox_data(wikicode, title)
         links = [link.title.strip() for link in wikicode.filter_wikilinks()]
         
         seed_data.append({
             'page_id': page_id,
             'title': title,
-            'infobox': infobox,
+            'infobox': infobox if infobox else {},  # Đảm bảo infobox luôn là dictionary
             'links': links
         })
         print(f"  -> Đã xử lý: {title} (ID: {page_id})")
