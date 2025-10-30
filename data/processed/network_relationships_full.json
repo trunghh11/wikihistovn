@@ -11,6 +11,16 @@
     },
     {
         "source": "Minh Mạng",
+        "target": "Gia Long",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Minh Mạng",
+        "target": "Thuận Thiên Cao Hoàng hậu",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Minh Mạng",
         "target": "Tá Thiên Nhân Hoàng hậu",
         "type": "PHỐI_NGẪU_VỚI"
     },
@@ -35,6 +45,16 @@
         "type": "KẾ_NHIỆM_CỦA"
     },
     {
+        "source": "Bảo Đại",
+        "target": "Khải Định",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Bảo Đại",
+        "target": "Từ Cung Hoàng thái hậu",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
         "source": "Tự Đức",
         "target": "Dục Đức",
         "type": "TIỀN_NHIỆM_CỦA"
@@ -43,6 +63,21 @@
         "source": "Tự Đức",
         "target": "Thiệu Trị",
         "type": "KẾ_NHIỆM_CỦA"
+    },
+    {
+        "source": "Tự Đức",
+        "target": "Thiệu Trị",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Tự Đức",
+        "target": "Từ Dụ",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Tự Đức",
+        "target": "Lệ Thiên Anh Hoàng hậu",
+        "type": "PHỐI_NGẪU_VỚI"
     },
     {
         "source": "Tự Đức",
@@ -61,6 +96,16 @@
     },
     {
         "source": "Thành Thái",
+        "target": "Dục Đức",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Thành Thái",
+        "target": "Từ Minh Huệ Hoàng hậu",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Thành Thái",
         "target": "16 hoàng tử và nhiều công chúa",
         "type": "LÀ_CHA_CỦA"
     },
@@ -73,6 +118,21 @@
         "source": "Thiệu Trị",
         "target": "Minh Mạng",
         "type": "KẾ_NHIỆM_CỦA"
+    },
+    {
+        "source": "Thiệu Trị",
+        "target": "Nguyễn Thánh Tổ Minh Mạng",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Thiệu Trị",
+        "target": "Tá Thiên Nhân Hoàng hậu Hồ Thị Hoa",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Thiệu Trị",
+        "target": "Nghi Thiên Chương Hoàng hậucùng nhiều phi tần khác",
+        "type": "PHỐI_NGẪU_VỚI"
     },
     {
         "source": "Thiệu Trị",
@@ -91,6 +151,21 @@
     },
     {
         "source": "Dục Đức",
+        "target": "Nguyễn Phúc Hồng Y",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Dục Đức",
+        "target": "Trần Thị Nga",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Dục Đức",
+        "target": "Từ Minh Huệ Hoàng hậu",
+        "type": "PHỐI_NGẪU_VỚI"
+    },
+    {
+        "source": "Dục Đức",
         "target": "19 người con, bao gồm 11 hoàng tử và 8 công chúa",
         "type": "LÀ_CHA_CỦA"
     },
@@ -105,6 +180,16 @@
         "type": "KẾ_NHIỆM_CỦA"
     },
     {
+        "source": "Kiến Phúc",
+        "target": "Nguyễn Phúc Hồng Cai",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Kiến Phúc",
+        "target": "Bùi Thị Thanh",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
         "source": "Đồng Khánh",
         "target": "Thành Thái",
         "type": "TIỀN_NHIỆM_CỦA"
@@ -113,6 +198,21 @@
         "source": "Đồng Khánh",
         "target": "Hàm Nghi",
         "type": "KẾ_NHIỆM_CỦA"
+    },
+    {
+        "source": "Đồng Khánh",
+        "target": "Nguyễn Phúc Hồng Cai",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Đồng Khánh",
+        "target": "Bùi Thị Thanh",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Đồng Khánh",
+        "target": "Phụ Thiên Thuần hoàng hậuHựu Thiên Thuần hoàng hậuvà nhiều bà phi khác.",
+        "type": "PHỐI_NGẪU_VỚI"
     },
     {
         "source": "Đồng Khánh",
@@ -131,6 +231,21 @@
     },
     {
         "source": "Hàm Nghi",
+        "target": "Nguyễn Phúc Hồng Cai",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Hàm Nghi",
+        "target": "Phan Thị Nhàn",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Hàm Nghi",
+        "target": "Marcelle Laloe",
+        "type": "PHỐI_NGẪU_VỚI"
+    },
+    {
+        "source": "Hàm Nghi",
         "target": "Nguyễn Phúc Như MaiNguyễn Phúc Như LýNguyễn Phúc Minh Đức",
         "type": "LÀ_CHA_CỦA"
     },
@@ -143,6 +258,16 @@
         "source": "Duy Tân",
         "target": "Thành Thái",
         "type": "KẾ_NHIỆM_CỦA"
+    },
+    {
+        "source": "Duy Tân",
+        "target": "Thành Thái",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Duy Tân",
+        "target": "Nguyễn Thị Định",
+        "type": "LÀ_CON_CỦA"
     },
     {
         "source": "Duy Tân",
@@ -166,6 +291,36 @@
     },
     {
         "source": "Khải Định",
+        "target": "Đồng Khánh",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Khải Định",
+        "target": "Hựu Thiên Thuần Hoàng hậu",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Khải Định",
+        "target": "Hoàng Quý phi Trương Như Thị Tịnh",
+        "type": "PHỐI_NGẪU_VỚI"
+    },
+    {
+        "source": "Khải Định",
+        "target": "Ân phi Hồ Thị Chỉ",
+        "type": "PHỐI_NGẪU_VỚI"
+    },
+    {
+        "source": "Khải Định",
+        "target": "Huệ phi Hoàng Thị Cúc",
+        "type": "PHỐI_NGẪU_VỚI"
+    },
+    {
+        "source": "Khải Định",
+        "target": "vài bà phi tần khác",
+        "type": "PHỐI_NGẪU_VỚI"
+    },
+    {
+        "source": "Khải Định",
         "target": "Bảo Đại",
         "type": "LÀ_CHA_CỦA"
     },
@@ -181,18 +336,23 @@
     },
     {
         "source": "Hiệp Hòa",
+        "target": "Nguyễn Hiến Tổ Thiệu Trị",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Hiệp Hòa",
+        "target": "Thụy tần Trương Thị Thận",
+        "type": "LÀ_CON_CỦA"
+    },
+    {
+        "source": "Hiệp Hòa",
         "target": "11 hoàng tử6 công chúa",
         "type": "LÀ_CHA_CỦA"
     },
     {
-        "source": "Bùi Thị Xuân",
-        "target": "Nhà Tây Sơn",
-        "type": "PHỤC_VỤ"
-    },
-    {
-        "source": "Nguyễn Văn Hinh",
-        "target": "Chiến tranh Đông Dương",
-        "type": "THAM_GIA_SỰ_KIỆN"
+        "source": "Phong trào Cần Vương",
+        "target": "Hàm Nghi",
+        "type": "CHỈ_HUY"
     },
     {
         "source": "Lê Văn Duyệt",
@@ -212,11 +372,6 @@
     {
         "source": "Minh Mạng",
         "target": "Đăng đàn cung",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Thuận Thiên Cao Hoàng hậu",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -242,16 +397,6 @@
     {
         "source": "Minh Mạng",
         "target": "Lăng Minh Mạng",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Nho giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Phật giáo",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -811,11 +956,6 @@
     },
     {
         "source": "Minh Mạng",
-        "target": "Hồi giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
         "target": "Nổi dậy Katip Sumat",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -902,11 +1042,6 @@
     {
         "source": "Minh Mạng",
         "target": "Joseph Marchand",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Trung Quốc",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -1087,11 +1222,6 @@
     {
         "source": "Minh Mạng",
         "target": "Louis-Philippe I của Pháp",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Công giáo",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -1512,11 +1642,6 @@
     {
         "source": "Gia Long",
         "target": "Cố đô Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Trung Quốc",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -2351,11 +2476,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Châu Âu",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Vũng Tàu",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -2756,11 +2876,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Nho giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Nguyễn Huy Tự",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -2846,11 +2961,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Đông Dương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Louis XVI",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -2916,11 +3026,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Hồi giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Mạc Công Bính",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -2946,22 +3051,12 @@
     },
     {
         "source": "Gia Long",
-        "target": "Phật giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Thái Lan",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
         "source": "Gia Long",
         "target": "Công giáo La Mã",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Đạo giáo",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -3386,11 +3481,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Hoàng đế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Trung cổ",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -3571,11 +3661,6 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Hoàng đế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Đế quốc Việt Nam",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -3661,27 +3746,12 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Từ Cung Hoàng thái hậu",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Huế",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
         "source": "Bảo Đại",
         "target": "Liên bang Đông Dương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
-        "target": "Phật giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
-        "target": "Công giáo",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -3966,11 +4036,6 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Nhật Bản",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Điện Kiến Trung (hoàng thành Huế)",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -4206,11 +4271,6 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Chính phủ",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Toàn quyền Đông Dương",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -4257,11 +4317,6 @@
     {
         "source": "Bảo Đại",
         "target": "Quân đội Quốc gia Việt Nam",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
-        "target": "Đông Dương",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -4486,11 +4541,6 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Trung Quốc",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Tú Mỡ",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -4521,22 +4571,12 @@
     },
     {
         "source": "Tự Đức",
-        "target": "Lệ Thiên Anh Hoàng hậu",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
         "target": "Đồng Khánh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
         "source": "Tự Đức",
         "target": "Kiến Phúc",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
-        "target": "Từ Dụ",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -4577,11 +4617,6 @@
     {
         "source": "Tự Đức",
         "target": "Nguyễn Phúc Hồng Bảo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
-        "target": "Nho giáo",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -4837,11 +4872,6 @@
     {
         "source": "Tự Đức",
         "target": "Thanh Hóa",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
-        "target": "Trung Quốc",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -5321,11 +5351,6 @@
     },
     {
         "source": "Thành Thái",
-        "target": "Dục Đức",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thành Thái",
         "target": "Phan Thị Điều",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -5427,16 +5452,6 @@
     {
         "source": "Thành Thái",
         "target": "Hoàng thành Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thành Thái",
-        "target": "Trung Quốc",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thành Thái",
-        "target": "Nhật Bản",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -5672,16 +5687,6 @@
     {
         "source": "Thiệu Trị",
         "target": "Lăng Thiệu Trị",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thiệu Trị",
-        "target": "Nho giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thiệu Trị",
-        "target": "Phật giáo",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -6311,11 +6316,6 @@
     },
     {
         "source": "Dục Đức",
-        "target": "Nguyễn Phúc Hồng Y",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Dục Đức",
         "target": "Huế",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -6511,11 +6511,6 @@
     },
     {
         "source": "Dục Đức",
-        "target": "Từ Minh Huệ Hoàng hậu",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Dục Đức",
         "target": "Bảo Chấn",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -6602,11 +6597,6 @@
     {
         "source": "Kiến Phúc",
         "target": "Đăng đàn cung",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Kiến Phúc",
-        "target": "Nguyễn Phúc Hồng Cai",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -6796,16 +6786,6 @@
     },
     {
         "source": "Đồng Khánh",
-        "target": "Phật giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Đồng Khánh",
-        "target": "Nho giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Đồng Khánh",
         "target": "Đăng đàn cung",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -6817,11 +6797,6 @@
     {
         "source": "Đồng Khánh",
         "target": "Dương Thị Thục",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Đồng Khánh",
-        "target": "Nguyễn Phúc Hồng Cai",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -6952,11 +6927,6 @@
     {
         "source": "Đồng Khánh",
         "target": "Khâm sứ Trung kỳ",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Đồng Khánh",
-        "target": "Hoàng đế",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -7116,11 +7086,6 @@
     },
     {
         "source": "Đồng Khánh",
-        "target": "Khải Định",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Đồng Khánh",
         "target": "Minh Mạng",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -7172,11 +7137,6 @@
     {
         "source": "Đồng Khánh",
         "target": "Phong trào Cần vương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Đồng Khánh",
-        "target": "Đông Dương",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -7446,11 +7406,6 @@
     },
     {
         "source": "Hàm Nghi",
-        "target": "Marcelle Laloe",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Hàm Nghi",
         "target": "Nguyễn Phúc Như Mai",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -7462,11 +7417,6 @@
     {
         "source": "Hàm Nghi",
         "target": "Nguyễn Phúc Minh Đức",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Hàm Nghi",
-        "target": "Nguyễn Phúc Hồng Cai",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -7507,11 +7457,6 @@
     {
         "source": "Hàm Nghi",
         "target": "Tôn Thất Thuyết",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Hàm Nghi",
-        "target": "Phong trào Cần Vương",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -7996,16 +7941,6 @@
     },
     {
         "source": "Duy Tân",
-        "target": "Đông Dương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Duy Tân",
-        "target": "Hoàng đế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Duy Tân",
         "target": "Cao Văn Luận",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -8151,11 +8086,6 @@
     },
     {
         "source": "Duy Tân",
-        "target": "Công giáo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Duy Tân",
         "target": "Guy Georges Vĩnh San",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -8242,11 +8172,6 @@
     {
         "source": "Khải Định",
         "target": "Ứng Lăng",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Khải Định",
-        "target": "Hoàng đế",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
