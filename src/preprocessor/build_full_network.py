@@ -71,6 +71,8 @@ def is_valid_link(title: str) -> bool:
     if not title: return False
     # Lọc các trang có số
     if any(char.isdigit() for char in title): return False
+    # Lọc địa danh phổ biến
+    if is_likely_location(title): return False
     # Lọc các trang hệ thống
     if title.lower().startswith(('tập tin:', 'thể loại:', 'bản mẫu:', 'danh sách', 'wikipedia:', 'chủ đề:')):
         return False
@@ -91,6 +93,34 @@ def is_valid_link(title: str) -> bool:
     ]
     if title.lower() in common_terms: return False
     return True
+
+def is_likely_location(title: str) -> bool:
+    """
+    Heuristic phát hiện địa danh để loại bỏ sớm.
+    Tránh tạo node người nhầm với địa điểm.
+    """
+    t = title.lower()
+    # Khớp theo từ khóa xuất hiện trong chuỗi
+    location_keywords = [
+        'tỉnh', 'thành phố', 'quận', 'huyện', 'xã', 'phường',
+        'thị xã', 'thị trấn', 'vịnh', 'đảo', 'bán đảo', 'cảng',
+        'cầu', 'đèo', 'đồi', 'núi', 'sông', 'suối', 'hồ', 'biển',
+        'vườn quốc gia', 'khu bảo tồn', 'cố đô', 'kinh thành', 'thành cổ',
+        'lăng', 'đền', 'chùa', 'miếu', 'thánh thất', 'nhà thờ', 'tu viện'
+    ]
+    # Khớp theo hậu tố phổ biến
+    location_suffixes = [
+        ' province', ' city', ' district', ' county', ' river', ' lake',
+        ' bay', ' gulf', ' cape', ' strait', ' island', ' islands',
+        ' archipelago', ' mountain', ' hill', ' range', ' bridge', ' port'
+    ]
+    # Bao quanh bởi khoảng trắng để khớp từ khóa nguyên vẹn
+    wrapped = f" {t} "
+    if any(f" {kw} " in wrapped for kw in location_keywords):
+        return True
+    if any(t.endswith(suf) for suf in location_suffixes):
+        return True
+    return False
 
 def clean_infobox_value(value_wikitext: str) -> List[str]:
     """

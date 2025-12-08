@@ -355,11 +355,6 @@
         "type": "CHỈ_HUY"
     },
     {
-        "source": "Lê Văn Duyệt",
-        "target": "Chúa Nguyễn",
-        "type": "PHỤC_VỤ"
-    },
-    {
         "source": "Minh Mạng",
         "target": "Vua Việt Nam",
         "type": "LIÊN_KẾT_TỚI"
@@ -392,11 +387,6 @@
     {
         "source": "Minh Mạng",
         "target": "Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Lăng Minh Mạng",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -487,11 +477,6 @@
     {
         "source": "Minh Mạng",
         "target": "Tân Hợi",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Thành phố Hồ Chí Minh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -791,11 +776,6 @@
     },
     {
         "source": "Minh Mạng",
-        "target": "Tương An Quận Vương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
         "target": "Tự Đức",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -1036,11 +1016,6 @@
     },
     {
         "source": "Minh Mạng",
-        "target": "Cố đô Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
         "target": "Joseph Marchand",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -1236,11 +1211,6 @@
     },
     {
         "source": "Minh Mạng",
-        "target": "Vịnh Thái Lan",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
         "target": "Chợ Thủ",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -1331,22 +1301,7 @@
     },
     {
         "source": "Minh Mạng",
-        "target": "Hồ Thị Hoa",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Lăng Thiệu Trị",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
         "target": "Hương Thủy",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Hồ Văn Bôi",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -1377,11 +1332,6 @@
     {
         "source": "Minh Mạng",
         "target": "Trần Thị Huân",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Minh Mạng",
-        "target": "Hồ Thị Tùy",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -1581,11 +1531,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Thiên Thọ Lăng",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Vua Việt Nam",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -1637,21 +1582,6 @@
     {
         "source": "Gia Long",
         "target": "Các tên gọi của nước Việt Nam",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Cố đô Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Quần đảo Hoàng Sa",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Quần đảo Trường Sa",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -1767,11 +1697,6 @@
     {
         "source": "Gia Long",
         "target": "Nguyễn Ánh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Thành phố Hồ Chí Minh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -2096,11 +2021,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Côn Đảo",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Trương Văn Đa",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -2311,11 +2231,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Miếu Gia Long",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Bắc Hà",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -2357,11 +2272,6 @@
     {
         "source": "Gia Long",
         "target": "Vĩnh Long",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Sông Hàm Luông",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -2477,11 +2387,6 @@
     {
         "source": "Gia Long",
         "target": "Vũng Tàu",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Đền Hiển Trung",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -2632,11 +2537,6 @@
     {
         "source": "Gia Long",
         "target": "Tôn Thất Hiệp (tướng nhà Nguyễn)",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Đèo Hải Vân",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -2856,17 +2756,7 @@
     },
     {
         "source": "Gia Long",
-        "target": "Văn Miếu Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Duy Tân",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Văn Miếu",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -3106,11 +2996,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Kinh thành Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Mã Sĩ Anh",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -3191,11 +3076,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Thế Miếu",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Mậu Dần",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -3222,11 +3102,6 @@
     {
         "source": "Gia Long",
         "target": "Tống Thị Lan",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Thế Tổ Miếu (hoàng thành Huế)",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -3471,11 +3346,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Hồ Văn Bôi",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Thổ Châu (đảo)",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -3546,11 +3416,6 @@
     },
     {
         "source": "Gia Long",
-        "target": "Hồ Xuân Hương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
         "target": "Tử Cấm Thành",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -3602,11 +3467,6 @@
     {
         "source": "Gia Long",
         "target": "Lịch sử nước ta (thơ lịch sử)",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Gia Long",
-        "target": "Hồ Chí Minh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -3956,11 +3816,6 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Sông Hàn (Đà Nẵng)",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Nhã nhạc cung đình Huế",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -4001,11 +3856,6 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Hồ Đắc Khải",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Bùi Bằng Đoàn",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -4027,11 +3877,6 @@
     {
         "source": "Bảo Đại",
         "target": "Vương Tứ Đại",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
-        "target": "Nhật đảo chính Pháp tại Đông Dương",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -4206,17 +4051,7 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Chủ tịch Hồ Chí Minh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Georges Thierry d'Argenlieu",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
-        "target": "Đảng Xã hội Pháp",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -4256,16 +4091,6 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Bán đảo Đông Dương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
-        "target": "Vịnh Hạ Long",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Thanh niên hành khúc",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -4291,11 +4116,6 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Thông cáo chung Vịnh Hạ Long",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Tổng thống Pháp",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -4307,11 +4127,6 @@
     {
         "source": "Bảo Đại",
         "target": "Nguyên thủ quốc gia",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
-        "target": "Nhà xuất bản Văn Nghệ Thành phố Hồ Chí Minh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -4332,11 +4147,6 @@
     {
         "source": "Bảo Đại",
         "target": "Nguyễn Phúc Bửu Lộc",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
-        "target": "Thành phố Hồ Chí Minh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -4476,11 +4286,6 @@
     },
     {
         "source": "Bảo Đại",
-        "target": "Huyện Sỹ",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Bảo Đại",
         "target": "Gò Công",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -4582,11 +4387,6 @@
     {
         "source": "Tự Đức",
         "target": "Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
-        "target": "Lăng Tự Đức",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -4806,11 +4606,6 @@
     },
     {
         "source": "Tự Đức",
-        "target": "Bảy Núi",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
         "target": "Ba Xuyên",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -4837,11 +4632,6 @@
     {
         "source": "Tự Đức",
         "target": "Canh Tuất",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
-        "target": "Nam Kỳ Lục tỉnh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -5151,11 +4941,6 @@
     },
     {
         "source": "Tự Đức",
-        "target": "Nam Kỳ lục tỉnh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
         "target": "Ngô Tất Tố",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -5186,11 +4971,6 @@
     },
     {
         "source": "Tự Đức",
-        "target": "Hồ Chí Minh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
         "target": "Phan Bội Châu",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -5202,11 +4982,6 @@
     {
         "source": "Tự Đức",
         "target": "Võ Thị Duyên",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
-        "target": "Khiêm Lăng",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -5317,16 +5092,6 @@
     {
         "source": "Tự Đức",
         "target": "Báo Tuổi Trẻ",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
-        "target": "Pháp Luật Thành phố Hồ Chí Minh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Tự Đức",
-        "target": "Ngự chế Việt sử tổng vịnh tập",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -5561,11 +5326,6 @@
     },
     {
         "source": "Thành Thái",
-        "target": "Thành phố Hồ Chí Minh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thành Thái",
         "target": "Thanh niên (báo)",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -5626,11 +5386,6 @@
     },
     {
         "source": "Thành Thái",
-        "target": "Hải Lăng",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thành Thái",
         "target": "Quảng Trị",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -5676,17 +5431,7 @@
     },
     {
         "source": "Thiệu Trị",
-        "target": "Hồ Thị Hoa",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thiệu Trị",
         "target": "Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thiệu Trị",
-        "target": "Lăng Thiệu Trị",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -5921,22 +5666,12 @@
     },
     {
         "source": "Thiệu Trị",
-        "target": "Thế Tổ Miếu (hoàng thành Huế)",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thiệu Trị",
         "target": "Hương Thủy",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
         "source": "Thiệu Trị",
         "target": "Thừa Thiên – Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thiệu Trị",
-        "target": "Xương Lăng",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -6097,11 +5832,6 @@
     {
         "source": "Thiệu Trị",
         "target": "Hà Tĩnh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Thiệu Trị",
-        "target": "Thủy Biều, Huế",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -6321,11 +6051,6 @@
     },
     {
         "source": "Dục Đức",
-        "target": "Lăng Dục Đức",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Dục Đức",
         "target": "Trần Trọng Kim",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -6421,11 +6146,6 @@
     },
     {
         "source": "Dục Đức",
-        "target": "Kinh thành Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Dục Đức",
         "target": "Nguyễn Nhạc",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -6462,11 +6182,6 @@
     {
         "source": "Dục Đức",
         "target": "Hương Thủy",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Dục Đức",
-        "target": "An Lăng",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -6611,11 +6326,6 @@
     },
     {
         "source": "Kiến Phúc",
-        "target": "Lăng Kiến Phúc",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Kiến Phúc",
         "target": "Hòa ước Patenôtre",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -6721,11 +6431,6 @@
     },
     {
         "source": "Kiến Phúc",
-        "target": "Miếu hiệu",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Kiến Phúc",
         "target": "Nguyễn Phúc Miên Định",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -6807,11 +6512,6 @@
     {
         "source": "Đồng Khánh",
         "target": "Liên bang Đông Dương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Đồng Khánh",
-        "target": "Lăng Đồng Khánh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -6992,6 +6692,11 @@
     {
         "source": "Đồng Khánh",
         "target": "Nguyễn Trọng Hợp",
+        "type": "LIÊN_KẾT_TỚI"
+    },
+    {
+        "source": "Đồng Khánh",
+        "target": "Hoàng Hữu Thường",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -7286,11 +6991,6 @@
     },
     {
         "source": "Đồng Khánh",
-        "target": "Đường Trần Hưng Đạo, Thành phố Hồ Chí Minh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Đồng Khánh",
         "target": "Cơ mật viện",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -7342,11 +7042,6 @@
     {
         "source": "Đồng Khánh",
         "target": "Báo Thanh Niên",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Đồng Khánh",
-        "target": "Nguyễn Phúc Bửu Đảo",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -7516,17 +7211,7 @@
     },
     {
         "source": "Hàm Nghi",
-        "target": "Kinh thành Huế",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Hàm Nghi",
         "target": "Quảng Trị",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Hàm Nghi",
-        "target": "Côn Đảo",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -7611,16 +7296,6 @@
     },
     {
         "source": "Hàm Nghi",
-        "target": "Lăng Cô",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Hàm Nghi",
-        "target": "Thành phố Hồ Chí Minh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Hàm Nghi",
         "target": "Paris",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -7642,11 +7317,6 @@
     {
         "source": "Hàm Nghi",
         "target": "Niên hiệu",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Hàm Nghi",
-        "target": "Đường Hàm Nghi, Thành phố Hồ Chí Minh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -7766,11 +7436,6 @@
     },
     {
         "source": "Duy Tân",
-        "target": "Lăng Dục Đức",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Duy Tân",
         "target": "Canh Tý",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -7886,11 +7551,6 @@
     },
     {
         "source": "Duy Tân",
-        "target": "Đức Quốc xã",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Duy Tân",
         "target": "Đức",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -7936,11 +7596,6 @@
     },
     {
         "source": "Duy Tân",
-        "target": "Bán đảo Đông Dương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Duy Tân",
         "target": "Cao Văn Luận",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -7967,11 +7622,6 @@
     {
         "source": "Duy Tân",
         "target": "GMT",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Duy Tân",
-        "target": "An Lăng",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -8017,11 +7667,6 @@
     {
         "source": "Duy Tân",
         "target": "Réunion",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Duy Tân",
-        "target": "Cầu Giấy (quận)",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -8141,11 +7786,6 @@
     },
     {
         "source": "Khải Định",
-        "target": "Hồ Thị Chỉ",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Khải Định",
         "target": "Từ Cung Hoàng thái hậu",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -8167,11 +7807,6 @@
     {
         "source": "Khải Định",
         "target": "Liên bang Đông Dương",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Khải Định",
-        "target": "Ứng Lăng",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -8221,11 +7856,6 @@
     },
     {
         "source": "Khải Định",
-        "target": "Hồ Chí Minh",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Khải Định",
         "target": "Vi hành",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -8261,11 +7891,6 @@
     },
     {
         "source": "Khải Định",
-        "target": "Lăng Khải Định",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Khải Định",
         "target": "Ất Sửu",
         "type": "LIÊN_KẾT_TỚI"
     },
@@ -8282,11 +7907,6 @@
     {
         "source": "Khải Định",
         "target": "Hoàng quý phi",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Khải Định",
-        "target": "Hồ Đắc Trung",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
@@ -8487,11 +8107,6 @@
     {
         "source": "Hiệp Hòa",
         "target": "Trần Trọng Kim",
-        "type": "LIÊN_KẾT_TỚI"
-    },
-    {
-        "source": "Hiệp Hòa",
-        "target": "Thành phố Hồ Chí Minh",
         "type": "LIÊN_KẾT_TỚI"
     },
     {
