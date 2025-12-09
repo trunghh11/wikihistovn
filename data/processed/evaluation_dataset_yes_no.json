@@ -798,5 +798,1005 @@
     {
         "question": "Có phải Thành Thái là anh em của Mạc Tử Thiêm không?",
         "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc tiền nhiệm của Hàm Nghi không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc tiền nhiệm của Lũng Phìn không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc kế nhiệm Hiệp Hòa không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc kế nhiệm Đinh Tiên Hoàng không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Nguyễn Phúc Hồng Cai không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Tây Đô không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Bùi Thị Thanh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Nguyễn Phúc Nhu Nghi không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Vua Việt Nam không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Cảnh Tông không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc là anh em của Hiệp Hòa không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc là anh em của Gò Công Tây không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Phạm Thận Duật không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Crum không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc là anh em của Bắc Ninh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc là anh em của Canh Tuất không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Dục Đức không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Nguyễn Văn Thiệu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Đồng Khánh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc là con của Đăk Plô không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc là anh em của Tuyên Quang không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc là anh em của Hoằng Trường không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Kiến Phúc bị phế truất bởi Tôn Thất Thuyết không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Kiến Phúc bị phế truất bởi Veneto không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng tiền nhiệm của Thiệu Trị không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng tiền nhiệm của Jean-Pierre Rampal không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng kế nhiệm Gia Long không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng kế nhiệm Phạm Thị Tuyết không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Gia Long không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Thượng Ninh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là cha của Thiệu Trị không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là cha của Võ Thị Duyên không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Cao Bằng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Odoacer không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nguyễn Văn Châu không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Lisboa không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng kế nhiệm Canh Thìn không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng kế nhiệm Đôn Châu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nguyễn Công Tiệp không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Trần Dụ Tông không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lê Tiến Thành không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Phou Hin Boun không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Trần Công Nghị không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Du không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Thành Bát Quái không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nguyễn Đăng Quang không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Giáp Ngọ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Người Kinh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Bảo Lạc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lạc Hóa không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Savannakhet không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Trịnh Tử Anh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Khắc Thiệu không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Hoằng Tiến không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Trần Thị Tuyến không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Trịnh Căn không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Trấn Ninh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Trần Thị Tiêm không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của An Giang không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Georges Vĩnh San không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Tùng Thiện Vương không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Quỳ Châu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng được bổ nhiệm bởi Trịnh Hoài Đức không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng được bổ nhiệm bởi Algiers không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Văn Thanh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lê Văn Đức không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Phan Bá Vành không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Lima không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Trần Thị Tiền không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Ất Dậu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Hồ Văn Chiêm không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Thiên Chúa không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Tuyên Quang không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Thành Bát Quái không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lương Thị Nguyện không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Tràng Xá không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Quảng Ngãi không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Nguyễn Phúc Miên Túc không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Thái Nguyên không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Chùa Keo Hành Thiện không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Trần Thị Trúc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Trương Đăng Trình không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Châu Đốc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Pakse không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lê Thị Lộc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Londrina không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Tuy Lý Vương không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Mahendravarman không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Xiêm không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của William Dampier không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Thị Bảo không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lào không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Bùi Thị San không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Lê Thị Hài không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Đỗ Thị Tùng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Phúc Vĩnh Giêu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Hồ Thị Tùy không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Vinh Quý không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Thị Khuê không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Joseph Bonaparte không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Thị Hạnh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lý Thẩm không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng xử lý Pierre Borie không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng xử lý Nord-Pas-de-Calais không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Thị Viên không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Dương Thị Thục không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng bị xử lý bởi Phêrô không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng bị xử lý bởi Võ Văn Dũng không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Lạng Sơn không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Songkhone không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Trần Thị Huân không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Régine Crespin không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Chân Lạp không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Nguyễn Phúc Nhu Thuận không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Đoàn Thị Thụy không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Đặng Trần Đức không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nguyễn Phúc Cảnh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Chiêu Tông không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Ang Duong không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Đạo Tứ Ân Hiếu Nghĩa không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Lê Duy Lương không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Europi không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Đinh Thị Nghĩa không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Luanda không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nguyễn Thị Bân không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Đôn Châu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Ang Chan II không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nguyễn Phúc Nhu Nghi không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Thừa Thiên không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Nguyễn Thiện Thuật không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Đỗ Thị Cương không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Busan không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Xiêm La không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Nguyễn Phúc Hồng Hưu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Ang Mey không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Yết Dương không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Cái Văn Hợp không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lê Hậu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Chao Phraya Bodin Decha không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Nguyễn Phúc Ngọc Vân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Thị Trường không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Tống Mỹ Linh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Gia Định không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Trương Quần không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Hưng Yên không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Hữu Nghị Quan không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Hồ Văn Bôi không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Khoái không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Lăng Thiệu Trị không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Shihõken Seishi không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Bắc Kỳ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Hồng Bàng không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Trần Thị Thanh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Đinh Đạo không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Nông Văn Vân không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Đạo Cao Đài không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Trần Thị Tiêm không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Đỗ Nhân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Phnôm Pênh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Huỳnh Phong Tranh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Đặng Đức Siêu không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của An Truyền không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Gia Quý không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Hoà Hảo không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Quảng Trị không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Allen Dulles không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lê Thị Ái không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Phúc Dương không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Đỗ Văn Thạch không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lê Trang Tông không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Trấn Tây Thành không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Lý Sư Lợi không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Vương Hồng Sển không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nghĩa Tá không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Đoàn Đức Nghị không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Kha Nom Phane không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Khammuane không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Nguyễn Thị Bân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Thị Thúy Trúc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Sébastien Grosjean không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Nghệ An không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Anh Sơn không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Nam Kỳ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Phan Rang-Tháp Chàm không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Trung Kỳ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Lê Do không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Cái Thị Trinh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Serena Williams không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Lương Đình Suất không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Phan Thúc Trực không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Trần Thị Nghiêm không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nam Xang không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Tương An Quận Vương không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nam Tấn Vương không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng được bổ nhiệm bởi Dương Văn Phong không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng được bổ nhiệm bởi Liêu Ninh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Ngô Thị Chính không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Trần Huy Liệu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Nguyễn Hữu Trạc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Triệu Lộc không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Quảng Nam không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Nguyễn Thị Yên không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Phạm Văn Chẩn không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Mỹ Thái không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Thanh Hóa không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Pakubuwono IV không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Trương Đăng Quế không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Tu Bông không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Ninh Bình không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là anh em của Samsung không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Nam Vang không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là đối thủ của Thuận Tông không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Nguyễn Thị Tính không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là con của Song Liễu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Phạm Thị Tuyết không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Minh Mạng là phối ngẫu với Pù Luông không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị tiền nhiệm của Tự Đức không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị tiền nhiệm của CERN không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị kế nhiệm Minh Mạng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị kế nhiệm The Spectator không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Nguyễn Thánh Tổ Minh Mạng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của James Broun-Ramsay không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Nguyễn Phúc Hồng Phi không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Oakland, California không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Nguyễn Phúc Hồng Truyền không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Chakrey Long không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là đồng minh với Xiêm La không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là đồng minh với Xuân Long không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Nguyễn Phúc Nhàn Đức không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Thành Bình Thọ không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là phối ngẫu với Nguyễn Lâm không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là phối ngẫu với Nguyễn Văn Siêu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Vua Việt Nam không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Hữu Liên không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Trương Thị Thận không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Lê Thị Bính không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Ang Mey không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Ma Cao không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Nguyễn Phúc Lệ Nhàn không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Bố Hạ không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là đồng minh với Trương Minh Giảng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là đồng minh với Hiệp Hòa không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Nguyễn Phúc Hồng Cai không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là con của Bắc Trung Bộ không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là anh em của Kampot không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là anh em của Sơn Hạ không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị bị xử lý bởi Ất Tỵ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị bị xử lý bởi Seponh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thiệu Trị là đồng minh với Nguyễn Tri Phương không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thiệu Trị là đồng minh với Quý Mùi không?",
+        "expected_answer": "Sai"
     }
 ]
