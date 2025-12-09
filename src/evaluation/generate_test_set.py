@@ -10,7 +10,7 @@ from openai import RateLimitError # Lỗi cần bắt cho Key Rotation
 
 # ⚠️ DÁN TOÀN BỘ API KEY CỦA BẠN VÀO DANH SÁCH NÀY
 API_KEYS = [
-    "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",
+    os.getenv("OPENAI_API_KEY"),
     # Thêm bao nhiêu key tùy thích
 ]
 
