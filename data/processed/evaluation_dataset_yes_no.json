@@ -1,0 +1,802 @@
+[
+    {
+        "question": "Có phải Bảo Đại kế nhiệm Khải Định không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại kế nhiệm Nguyễn Định Trình không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là con của Khải Định không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là con của Quắc không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là con của Vua Việt Nam không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là con của Bihar không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại xử lý Trung Hoa Dân Quốc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại xử lý Lạc Long Quân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại chỉ huy Hồng Kông không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại chỉ huy Carlos Arias Navarro không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại chỉ huy Georges Revers không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại chỉ huy Vinh Hưng không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là đồng minh với Trung Quốc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là đồng minh với Hải Thịnh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại bị phế truất bởi Ngô Đình Diệm không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại bị phế truất bởi Tống Phước Lương không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là đồng minh với Cao Đài không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là đồng minh với Trần Hiện không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là con của Nguyễn Phúc Bảo Long không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là con của Đức Linh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là mẹ của Nam Phương không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là mẹ của Chiết Giang không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại chỉ huy Hồ Chí Minh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại chỉ huy Nguyễn Phúc Vĩnh Giu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Jean François Eugène Charles không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Cao Hữu Dực không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là đồng minh với Đông Dương không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là đồng minh với Lý Khắc không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Bùi Mộng Điệp không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Cầu Đò Quan không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là đồng minh với Tưởng Giới Thạch không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là đồng minh với Hawaii không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại bị phế truất bởi Nguyễn Văn Hinh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại bị phế truất bởi Yên Nguyên không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là anh em của Tôn Quang Phiệt không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là anh em của Chùa Phổ Minh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là anh em của Thừa Thiên Huế không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là anh em của Grand Slam không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là con của Hoàng Thị Cúc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là con của Vĩ Dạ không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là đối thủ của Nguyễn Đắc Xuân không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là đối thủ của Chùa Keo Hành Thiện không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Trung Kỳ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Bạch Ngọc không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Nguyễn Phúc Phương Minh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Nguyễn Phúc Cự không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Bắc Ninh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Joseph Pujol không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Lê Thị Bính không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Jordan Vogt-Roberts không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Huyện Sỹ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Thủy Chân Lạp không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Lycée Condorcet không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Bảo Đại là phối ngẫu với Hoàn Long không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức tiền nhiệm của Dục Đức không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức tiền nhiệm của Gyeongsangbuk không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức kế nhiệm Thiệu Trị không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức kế nhiệm Vanuatu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Thiệu Trị không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Hải Thịnh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Từ Dụ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Phước Thể không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là cha của Nguyễn Phúc Ưng Ái không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là cha của Khổng Tử không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là cha của Nguyễn Phúc Ưng Kỷ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là cha của Ngọ không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là cha của Nguyễn Phúc Ưng Đăng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là cha của Hưng Thủy không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Thái Nguyên không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Tĩnh Túc không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Cao Bằng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Trấn Tây Thành không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là mẹ của Hồ Chí Minh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là mẹ của Nguyễn Quang Khanh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Nguyễn Thị Cẩm không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Ngô Đình Huân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Ang Mey không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Cô Trúc không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Hà Tĩnh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Quảng Ngọc không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Khiêm Lăng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Nguyễn Phúc Phương Minh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Nguyễn Văn Tuấn không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Đinh Phế Đế không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Cao Bá Quát không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Cờ Đen không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Nam Kỳ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Đỗ Nhân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Lê Duy Cự không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Thanh Quân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là mẹ của Võ Xuân Cẩn không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là mẹ của Nguyễn Phúc Ngọc Trân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Nguyễn Văn Thị Hương không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Diên Khánh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Định Tường không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Khâu Vai không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Paul-Louis-Félix Philastre không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Ang Duong không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Nguyễn Đình Tân không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Nguyễn Phúc Thục Tĩnh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Nguyễn Văn Tường không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Po Saot không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Bắc Kỳ không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Huyền Cao không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Nguyễn Phúc Hồng Bảo không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là con của Phùng Thế Tài không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Canh Tuất không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Nguyễn Phúc Miên Áo không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Minh Mạng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Đan Dương không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Bắc Ninh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Hùng Thương Thần không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Nguyễn Nhược Thị Bích không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Jean-Claude Izzo không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là mẹ của Phan Bội Châu không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là mẹ của Nguyễn Thiện Kế không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của An Giang không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Manila không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Kiến Phúc không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Minh Sư Đạo không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Thanh Hóa không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Tự Đức không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Lạng Sơn không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Nam Ninh Hòa không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Ninh Bình không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Võ Giàng không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là đối thủ của Ý không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là đối thủ của Cam Ranh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là đồng minh với Tây Ban Nha không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là đồng minh với Nguyễn Phúc Miên Tuấn không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Ninh Thuận không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Sébastien Grosjean không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Vĩnh Long không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Gia Lương không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Nguyễn Nhược Sơn không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức được bổ nhiệm bởi Mạc Văn Tô không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là mẹ của Đồng Khánh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là mẹ của Zeus không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Nguyễn Đăng Giai không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Pù Nhi không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Thừa Thiên không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Bạch Xa không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Khánh Hòa không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là anh em của Nguyễn Thị Huyên không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Tự Đức là đồng minh với Đà Nẵng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Tự Đức là đồng minh với Châu Hồng không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái tiền nhiệm của Duy Tân không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái tiền nhiệm của Ông Ích Đường không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái kế nhiệm Đồng Khánh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái kế nhiệm Tùng Ảnh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Dục Đức không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Văn Diệu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Diệm không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyệt Viên không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh San không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Cồn Cỏ không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của Giai Triệu không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của Tôn Quang Phiệt không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Hữu Thị Nga không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Bạch Mai không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Lưu không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Trịnh Cối không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Giác không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Giai Triệu không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Hữu Thị Nhàn không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Xuân Lập, Thọ Xuân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Réunion không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Thượng Ninh không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái kế nhiệm Pierre Paul Rheinart không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái kế nhiệm Ang Duong không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của Hải Lăng không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của DC Comics không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Khôi không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nghĩa Lộc không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Cầu không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Lâm Duy Hiệp không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Giêu không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Trần Lực không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái bị phế truất bởi Nguyễn Văn Tường không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái bị phế truất bởi Hy Tổ không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Thân không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nhà Hậu Trần không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái được bổ nhiệm bởi Nguyễn Gia Thị Anh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái được bổ nhiệm bởi Phan Rang không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Quỳnh không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Ngọc Vân không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Hy không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Phùng Hưng không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Giu không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Phùng Thế Tài không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của Thừa Thiên không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của Jean-Jacques Schuhl không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của Quảng Trị không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của Nguyễn Phúc Ưng Chuyên không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Nguyễn Phúc Vĩnh Hòe không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là con của Lê Văn Khôi không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái bị phế truất bởi Tôn Thất Thuyết không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái bị phế truất bởi Gò Công Đông không?",
+        "expected_answer": "Sai"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của Khánh Hòa không?",
+        "expected_answer": "Đúng"
+    },
+    {
+        "question": "Có phải Thành Thái là anh em của Mạc Tử Thiêm không?",
+        "expected_answer": "Sai"
+    }
+]
