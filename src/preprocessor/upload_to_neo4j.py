@@ -10,8 +10,8 @@ LOCAL_PASSWORD = "12345678"  # <--- Thay mật khẩu bạn đã đặt lúc cà
 
 # Đường dẫn file dữ liệu
 BASE_PATH = 'data/processed/' # Lưu ý đường dẫn tương đối khi chạy từ thư mục gốc dự án
-JSON_NODES_IN = os.path.join(BASE_PATH, 'network_nodes_contextual.json')
-JSON_RELS_IN = os.path.join(BASE_PATH, 'network_relationships_contextual.json')
+JSON_NODES_IN = os.path.join(BASE_PATH, 'network_nodes_full.filtered.json')
+JSON_RELS_IN = os.path.join(BASE_PATH, 'network_relationships_full.context.refined.json')
 
 # --- CÁC CÂU LỆNH CYPHER ---
 
