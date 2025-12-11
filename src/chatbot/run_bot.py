@@ -1,4 +1,5 @@
 import sys
+import json
 import torch
 from neo4j import GraphDatabase
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -6,22 +7,27 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 # --- CẤU HÌNH ---
 NEO4J_URI = "bolt://localhost:7687"
 NEO4J_USER = "neo4j"
-NEO4J_PASS = "12345678"  # <--- Nhập mật khẩu của bạn
-MODEL_ID = "Qwen/Qwen2-0.5B-Instruct"
+NEO4J_PASS = "12345678"
+MODEL_ID = "Qwen/Qwen2.5-0.5B-Instruct"
 
-# --- 1. KHỞI TẠO MODEL ---
-print("\n>>> ⏳ Đang khởi tạo hệ thống...")
+# --- 1. KHỞI TẠO MODEL (CHẾ ĐỘ CPU SAFE MODE) ---
+print(f"\n>>> ⏳ Đang khởi tạo Model ({MODEL_ID})...")
 try:
     tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
+    # ⚠️ QUAN TRỌNG: Ép chạy CPU để tránh lỗi "NDArray > 2**32" trên Mac
+    print("    - Đang cấu hình chạy trên CPU (Chế độ ổn định cho Mac)...")
+    
     model = AutoModelForCausalLM.from_pretrained(
-        MODEL_ID, 
-        device_map="cpu", 
-        torch_dtype=torch.float32
+        MODEL_ID,
+        device_map="cpu",  # <--- KHÔNG DÙNG "auto" hay "mps"
+        torch_dtype=torch.float32, # <--- CPU chạy ổn định nhất với float32
+        low_cpu_mem_usage=True
     )
-    print("    - Model Qwen2-0.5B đã sẵn sàng!")
+    print("    - Model đã load thành công!")
+
 except Exception as e:
     print(f"❌ Lỗi load model: {e}")
     sys.exit(1)
@@ -35,185 +41,155 @@ except Exception as e:
     print(f"❌ Lỗi kết nối Neo4j: {e}")
     sys.exit(1)
 
-# --- 3. CORE LOGIC ---
+# --- 3. CÁC HÀM TRUY VẤN ---
 
-def get_graph_context(keyword):
-    """
-    Truy vấn đơn giản (1-hop): Chỉ lấy thông tin trực tiếp và dịch quan hệ thành tiếng Việt.
-    """
-    cypher_query = """
+def query_summary(keyword):
+    cypher = """
     CALL db.index.fulltext.queryNodes("title_index", $kw) YIELD node, score
-    WHERE score > 0.5
-    WITH node LIMIT 1
-    
-    // --- LẤY QUAN HỆ 1-HOP VÀ DỊCH NGAY ---
-    OPTIONAL MATCH (node)-[r]-(n1)
-    
-    // Giữ nguyên các loại quan hệ được liệt kê, chỉ lọc ra các quan hệ ít quan trọng
-    WHERE NOT type(r) IN ['LIÊN_KẾT_TỚI'] 
-    
-    RETURN 
-        node.title AS center, 
-        type(r) AS rel_type, 
-        n1.title AS neighbor,
-        startNode(r) = node AS is_outgoing
-    LIMIT 50
+    WHERE score > 0.6
+    RETURN node.title as name, node.summary as summary
+    LIMIT 1
     """
-    
-    context_lines = []
-    
-    def translate_relationship(center, rel_type, neighbor, is_outgoing):
-      """Hàm Python dịch quan hệ (Relationship Type) sang tiếng Việt tự nhiên."""
-      
-      # Dùng toLower và replace('_', ' ') cho các loại quan hệ ít gặp
-      rel_type_clean = rel_type.replace('_', ' ').lower()
-      
-      # 1. Dịch các quan hệ Huyết thống / Hôn nhân (Sống còn)
-      if rel_type == 'LÀ_CHA_CỦA':
-          return f"- {center} là cha của {neighbor}." if is_outgoing else f"- {center} là con của {neighbor}."
-      if rel_type == 'LÀ_MẸ_CỦA':
-          return f"- {center} là mẹ của {neighbor}." if is_outgoing else f"- {center} là con của {neighbor}."
-      if rel_type == 'LÀ_CON_CỦA':
-          return f"- {center} là con của {neighbor}." if is_outgoing else f"- {center} là cha/mẹ của {neighbor}." # Giữ logic tổng quát nếu không rõ giới tính
-      if rel_type == 'PHỐI_NGẪU_VỚI':
-          return f"- {center} là vợ/chồng của {neighbor}."
-      if rel_type == 'LÀ_ANH_EM_CỦA':
-          return f"- {center} là anh/chị/em của {neighbor}."
+    with driver.session() as session:
+        record = session.run(cypher, kw=keyword).single()
+        if record and record["summary"]:
+            return f"TÓM TẮT VỀ {record['name']}:\n{record['summary']}"
+    return None
 
-      # 2. Dịch các quan hệ Chính trị / Kế thừa
-      if rel_type == 'KẾ_NHIỆM_CỦA':
-          return f"- {center} là người kế nhiệm của {neighbor}." if is_outgoing else f"- {center} là người tiền nhiệm của {neighbor}."
-      if rel_type == 'TIỀN_NHIỆM_CỦA':
-          return f"- {center} là người tiền nhiệm của {neighbor}." if is_outgoing else f"- {center} là người kế nhiệm của {neighbor}."
+def query_relations(keyword):
+    cypher = """
+    CALL db.index.fulltext.queryNodes("title_index", $kw) YIELD node, score
+    WHERE score > 0.6
+    WITH node LIMIT 1
+    MATCH (node)-[r]-(n1)
+    WHERE NOT type(r) IN ['LIÊN_KẾT_TỚI']
+    RETURN node.title AS center, type(r) AS rel_type, n1.title AS neighbor
+    LIMIT 30
+    """
+    lines = []
+    with driver.session() as session:
+        for r in session.run(cypher, kw=keyword):
+            r_type = r['rel_type'].replace('_', ' ').lower()
+            lines.append(f"- {r['center']} là {r_type} của {r['neighbor']}")
+    return "\n".join(lines) if lines else None
 
-      # 3. Dịch các quan hệ Quản lý / Sự kiện
-      if rel_type == 'CHỈ_HUY':
-          return f"- {center} chỉ huy {neighbor}."
-      if rel_type == 'ĐƯỢC_CHỈ_HUY_BỞI':
-          return f"- {center} được chỉ huy bởi {neighbor}."
-      if rel_type == 'ĐƯỢC_BỔ_NHIỆM_BỞI':
-          return f"- {center} được bổ nhiệm bởi {neighbor}."
-      if rel_type == 'PHỤC_VỤ':
-          return f"- {center} phục vụ dưới trướng {neighbor}."
-      if rel_type == 'XỬ_LÝ':
-          return f"- {center} đã xử lý {neighbor}."
-      if rel_type == 'BỊ_XỬ_LÝ_BỞI':
-          return f"- {center} bị xử lý bởi {neighbor}."
-      if rel_type == 'BỊ_PHẾ_TRUẤT_BỞI':
-          return f"- {center} bị phế truất bởi {neighbor}."
+# --- 4. ROUTER ---
 
-      # 4. Dịch các quan hệ Xã hội / Đối đầu
-      if rel_type == 'ĐỒNG_MINH_VỚI':
-          return f"- {center} là đồng minh với {neighbor}."
-      if rel_type == 'ĐỒNG_ĐỘI_VỚI':
-          return f"- {center} là đồng đội với {neighbor}."
-      if rel_type == 'ĐỐI_THỦ_CỦA':
-          return f"- {center} là đối thủ của {neighbor}."
-      if rel_type == 'LÀ_THẦY_CỦA':
-          return f"- {center} là thầy của {neighbor}."
-      if rel_type == 'LÀ_TRÒ_CỦA':
-          return f"- {center} là trò (học trò) của {neighbor}."
-      
-      # 5. Fallback cho các quan hệ không được liệt kê
-      return f"- {center} có quan hệ {rel_type_clean} với {neighbor}."
+def detect_intent_and_keyword(question):
+    prompt = f"""Phân tích câu hỏi sau và trả về định dạng JSON duy nhất.
+Câu hỏi: "{question}"
 
+Yêu cầu:
+1. "intent": Chọn "SUMMARY" (tiểu sử, là ai) hoặc "RELATION" (quan hệ, cha con).
+2. "keyword": Tên nhân vật chính.
+
+Ví dụ: "Vua Minh Mạng là ai?" -> {{"intent": "SUMMARY", "keyword": "Minh Mạng"}}
+
+Trả về JSON:"""
+
+    messages = [{"role": "user", "content": prompt}]
+    text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    inputs = tokenizer([text], return_tensors="pt") # Không cần .to(device) vì đang ở CPU
+
+    # Sinh JSON
+    with torch.no_grad():
+        outputs = model.generate(
+            inputs.input_ids,
+            max_new_tokens=64,
+            do_sample=False, # Greedy decoding cho JSON
+            pad_token_id=tokenizer.eos_token_id,
+            attention_mask=inputs.attention_mask # Sửa warning attention mask
+        )
+    response = tokenizer.decode(outputs[0][inputs.input_ids.shape[1]:], skip_special_tokens=True)
 
     try:
-        with driver.session() as session:
-            result = session.run(cypher_query, kw=keyword)
-            for record in result:
-                line = translate_relationship(
-                    record['center'], 
-                    record['rel_type'], 
-                    record['neighbor'], 
-                    record['is_outgoing']
-                )
-                context_lines.append(line)
-            
-    except Exception as e:
-        return f"Lỗi Cypher: {str(e)}"
-            
-    # Loại bỏ trùng lặp và nối chuỗi
-    return "\n".join(list(set(context_lines))) if context_lines else ""
+        start = response.find("{")
+        end = response.rfind("}") + 1
+        if start != -1 and end != -1:
+            json_str = response[start:end]
+            return json.loads(json_str)
+        else:
+            return {"intent": "RELATION", "keyword": question}
+    except:
+        return {"intent": "RELATION", "keyword": question}
 
-def generate_response(question):
-    """Trả về cả câu trả lời VÀ context"""
-    context = get_graph_context(question)
-    
+# --- 5. RAG GENERATOR ---
+
+def generate_rag_response(question):
+    # 1. Router
+    analysis = detect_intent_and_keyword(question)
+    intent = analysis.get("intent", "RELATION")
+    keyword = analysis.get("keyword", question)
+
+    print(f"\n[DEBUG] Intent: {intent} | Keyword: {keyword}")
+
+    # 2. Retriever
+    if intent == "SUMMARY":
+        context = query_summary(keyword)
+        if not context:
+            context = query_relations(keyword)
+            intent = "RELATION (Fallback)"
+    else:
+        context = query_relations(keyword)
+
     if not context:
-        return "Xin lỗi, tôi không tìm thấy thông tin trong dữ liệu.", ""
+        return "Xin lỗi, tôi không tìm thấy thông tin trong cơ sở dữ liệu."
 
-    # Prompt được tinh chỉnh để Bot logic hơn
-    prompt_template = f"""Context information is below.
----------------------
+    # 3. Generator
+    system_prompt = "Bạn là trợ lý lịch sử Việt Nam. Chỉ trả lời dựa trên thông tin được cung cấp. Trả lời ngắn gọn bằng tiếng Việt."
+    
+    user_prompt = f"""THÔNG TIN TỪ DATABASE ({intent}):
+----------------
 {context}
----------------------
-Given the context information and not prior knowledge, answer the query.
-Query: {question}
-Answer (in Vietnamese, be direct):"""  
+----------------
+
+CÂU HỎI: {question}
+TRẢ LỜI:"""
 
     messages = [
-        {"role": "system", "content": "You are a history bot. Use the Context to answer. If the answer involves multiple steps (like grandfather), deduce it from the relations provided."},
-        {"role": "user", "content": prompt_template}
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_prompt}
     ]
     
     text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    inputs = tokenizer([text], return_tensors="pt").to(model.device)
-    input_len = inputs.input_ids.shape[1]
-
-    outputs = model.generate(
-        inputs.input_ids,
-        attention_mask=inputs.attention_mask,
-        max_new_tokens=100,
-        temperature=0.1, # Giảm nhiệt độ để bớt "sáng tạo" sai sự thật
-        pad_token_id=tokenizer.pad_token_id
-    )
+    inputs = tokenizer([text], return_tensors="pt")
     
-    generated_tokens = outputs[0][input_len:]
-    response = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+    with torch.no_grad():
+        outputs = model.generate(
+            inputs.input_ids,
+            attention_mask=inputs.attention_mask, # Fix warning
+            max_new_tokens=300,
+            temperature=0.3,
+            do_sample=True, # Fix warning (temperature cần do_sample=True)
+            repetition_penalty=1.1,
+            pad_token_id=tokenizer.eos_token_id
+        )
     
-    return response.strip(), context
+    answer = tokenizer.decode(outputs[0][inputs.input_ids.shape[1]:], skip_special_tokens=True)
+    return answer.strip()
 
-# --- 4. MAIN LOOP ---
-
-def start_chat_session():
+# --- 6. MAIN LOOP ---
+def start_chat():
     print("\n" + "="*50)
-    print("🤖 CHATBOT SỬ VIỆT (DEBUG MODE)")
-    print("💡 Context từ Neo4j sẽ được hiển thị màu vàng.")
-    print("="*50 + "\n")
-
+    print("🤖 Chatbot SỬ VIỆT (Transformers CPU Mode)")
+    print("⚠️ Lưu ý: Chạy trên CPU sẽ chậm hơn GPU/MLX")
+    print("="*50)
+    
     while True:
         try:
-            user_input = input("Bạn: ").strip()
-            if user_input.lower() in ['exit', 'quit', 'thoát']:
+            q = input("\nBạn: ").strip()
+            if q.lower() in ["exit", "quit", "thoát"]:
                 print("Bot: Tạm biệt!")
                 break
-            if not user_input:
-                continue
+            if not q: continue
 
-            print("Bot: Đang truy vấn...", end="\r")
-            
-            # Gọi hàm lấy cả answer và context
-            answer, context = generate_response(user_input)
-            
-            # Xóa dòng chờ
-            print(" " * 30, end="\r")
-            
-            # In Context (Màu vàng để dễ nhìn - ANSI code)
-            if context:
-                print("\033[93m" + "--- [NEO4J CONTEXT] ---")
-                print(context)
-                print("-----------------------" + "\033[0m")
-            else:
-                print("\033[91m" + "[!] Không tìm thấy Context trong Graph" + "\033[0m")
-
-            # In câu trả lời
-            print(f"Bot: {answer}\n")
+            ans = generate_rag_response(q)
+            print(f"Bot: {ans}")
             
         except KeyboardInterrupt:
             break
         except Exception as e:
-            print(f"Lỗi: {e}")
+            print(f"❌ Lỗi Runtime: {e}")
 
 if __name__ == "__main__":
-    start_chat_session()
+    start_chat()

@@ -1,4 +1,5 @@
 import json
+import csv
 import os
 from neo4j import GraphDatabase
 
@@ -10,8 +11,8 @@ LOCAL_PASSWORD = "12345678"  # <--- Thay mật khẩu bạn đã đặt lúc cà
 
 # Đường dẫn file dữ liệu
 BASE_PATH = 'data/processed/' # Lưu ý đường dẫn tương đối khi chạy từ thư mục gốc dự án
-JSON_NODES_IN = os.path.join(BASE_PATH, 'network_nodes_full.filtered.json')
-JSON_RELS_IN = os.path.join(BASE_PATH, 'network_relationships_full.context.refined.json')
+JSON_NODES_IN = os.path.join(BASE_PATH, 'nodes_metadata_enriched.json')
+CSV_RELS_IN = os.path.join(BASE_PATH, 'final_relations.csv')
 
 # --- CÁC CÂU LỆNH CYPHER ---
 
@@ -46,7 +47,7 @@ ON CREATE SET
                 ELSE 'TITLE_KEY_' + node.title 
                 END,
     n.infobox = node.infobox,
-    n.url = node.url
+    n.summary = node.summary
 // Thêm nhãn phụ (Person/Event) từ dữ liệu
 WITH n, node
 CALL apoc.create.addLabels(n, [node.label]) YIELD node AS result
@@ -59,8 +60,12 @@ CYPHER_UPLOAD_RELS = """
 UNWIND $rels_list AS rel
 MATCH (a:ThucThe {title: rel.source})
 MATCH (b:ThucThe {title: rel.target})
-// Tạo quan hệ động dựa vào field 'type' trong JSON
-CALL apoc.create.relationship(a, rel.type, {}, b) YIELD rel AS result
+CALL apoc.create.relationship(
+    a,
+    rel.type,
+    { evidence: rel.evidence },
+    b
+) YIELD rel AS result
 RETURN count(result) AS count
 """
 
@@ -120,7 +125,7 @@ if __name__ == "__main__":
     print("--- 🚀 Bắt đầu nạp dữ liệu vào Neo4j Local ---")
 
     # Kiểm tra file tồn tại
-    if not os.path.exists(JSON_NODES_IN) or not os.path.exists(JSON_RELS_IN):
+    if not os.path.exists(JSON_NODES_IN) or not os.path.exists(CSV_RELS_IN):
         print(f"❌ Lỗi: Không tìm thấy file dữ liệu.")
         print(f"Kiểm tra đường dẫn: {JSON_NODES_IN}")
         print("Hãy chạy script 'build_full_network.py' trước.")
@@ -128,8 +133,11 @@ if __name__ == "__main__":
         try:
             with open(JSON_NODES_IN, 'r', encoding='utf-8') as f:
                 nodes_list = json.load(f)
-            with open(JSON_RELS_IN, 'r', encoding='utf-8') as f:
-                rels_list = json.load(f)
+            rels_list = []
+            with open(CSV_RELS_IN, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    rels_list.append(row)
                 
             if not nodes_list:
                 print("❌ File Nodes bị rỗng!")
