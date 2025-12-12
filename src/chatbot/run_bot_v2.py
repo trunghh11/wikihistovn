@@ -9,6 +9,7 @@ NEO4J_USER = "neo4j"
 NEO4J_PASS = "12345678"
 # Model MLX Native (Tải bản này để tối ưu cho Mac)
 MODEL_ID = "Qwen/Qwen3-0.6B-MLX-bf16" 
+DEFAULT_MAX_TOKENS = 512
 
 # --- 1. LOAD MLX MODEL ---
 print("\n>>> ⏳ Đang khởi tạo Model MLX (Siêu tốc cho Mac)...")
@@ -44,7 +45,9 @@ def query_summary(keyword):
             return f"TÓM TẮT VỀ {record['name']}:\n{record['summary']}"
     return None
 
-def query_relations(keyword):
+
+def query_db_1hop(keyword):
+    """Truy vấn quan hệ trực tiếp (1 bước)"""
     cypher = """
     CALL db.index.fulltext.queryNodes("title_index", $kw) YIELD node, score
     WHERE score > 0.6
@@ -54,100 +57,142 @@ def query_relations(keyword):
     RETURN node.title AS center, type(r) AS rel_type, n1.title AS neighbor
     LIMIT 30
     """
-    lines = []
     with driver.session() as session:
-        for r in session.run(cypher, kw=keyword):
-            lines.append(f"- {r['center']} --[{r['rel_type']}]--> {r['neighbor']}")
+        # FIX QUAN TRỌNG: Dùng list() để lấy hết dữ liệu trước khi đóng session
+        records = list(session.run(cypher, kw=keyword))
+        
+    lines = [f"- {r['center']} --[{r['rel_type']}]--> {r['neighbor']}" for r in records]
     return "\n".join(lines) if lines else None
 
-# --- 4. INTENT DETECTOR (MLX) ---
+def query_db_2hop(keyword):
+    """Truy vấn quan hệ bắc cầu (2 bước)"""
+    cypher = """
+    CALL db.index.fulltext.queryNodes("title_index", $kw) YIELD node, score
+    WHERE score > 0.6
+    WITH node LIMIT 1
+    MATCH path = (node)-[*1..2]-(m)
+    WHERE NONE(r IN relationships(path) WHERE type(r) IN ['LIÊN_KẾT_TỚI'])
+    AND m.title <> node.title
+    RETURN path
+    LIMIT 50
+    """
+    paths_text = []
+    with driver.session() as session:
+        # FIX QUAN TRỌNG: Dùng list()
+        result = list(session.run(cypher, kw=keyword))
+        
+        for record in result:
+            path = record["path"]
+            nodes = path.nodes
+            rels = path.relationships
+            chain = []
+            for i in range(len(rels)):
+                start = nodes[i].get("title", "Unknown")
+                end = nodes[i+1].get("title", "Unknown")
+                rel_type = rels[i].type
+                # Xác định hướng mũi tên
+                if rels[i].start_node.element_id == nodes[i].element_id:
+                    chain.append(f"{start} --[{rel_type}]--> {end}")
+                else:
+                    chain.append(f"{end} --[{rel_type}]--> {start}")
+            paths_text.append(" ; ".join(chain))
+            
+    return "\n".join(list(set(paths_text))) if paths_text else None
+
+def get_context(keyword, intent, hops):
+    # 1. Nếu hỏi Summary
+    if intent == "SUMMARY":
+        context = query_summary(keyword)
+        if context: return context
+        # Nếu không có summary, fallback sang RELATION
+        intent = "RELATION (Fallback)"
+
+    # 2. Nếu hỏi Relation
+    if hops >= 2:
+        return query_db_2hop(keyword)
+    else:
+        return query_db_1hop(keyword)
 
 def run_mlx(prompt: str, max_tokens=128):
-    """Helper để sinh text với MLX, tắt verbose để không in lung tung"""
     output = generate(
         model, 
         tokenizer, 
         prompt=prompt, 
         max_tokens=max_tokens, 
-        verbose=True
+        verbose=False
     )
     return output
 
-def detect_intent_and_keyword(question):
-    prompt = f"""Phân tích câu hỏi sau và trả về định dạng JSON duy nhất.
+def analyze_question(question):
+    """Router thông minh: Xác định Intent, Keyword và Số bước nhảy"""
+    prompt = f"""Phân tích câu hỏi và trả về JSON.
 Câu hỏi: "{question}"
 
 Yêu cầu:
-1. "intent": Chọn "SUMMARY" (hỏi là ai, tiểu sử) hoặc "RELATION" (hỏi quan hệ, cha con).
+1. "intent": "SUMMARY" (hỏi là ai, tiểu sử) hoặc "RELATION" (quan hệ).
 2. "keyword": Tên nhân vật chính.
+3. "hops": 1 (quan hệ trực tiếp: cha, con) hoặc 2 (gián tiếp: ông, cháu, bác).
 
-Ví dụ: "Vua Minh Mạng là ai?" -> {{"intent": "SUMMARY", "keyword": "Minh Mạng"}}
+Ví dụ: "Ông nội Tự Đức là ai?" -> {{"intent": "RELATION", "keyword": "Tự Đức", "hops": 2}}
 
-Trả về JSON:"""
+JSON Output:"""
 
-    # Áp dụng chat template nếu có
+    # Format prompt theo chat template nếu có
     if hasattr(tokenizer, "apply_chat_template") and tokenizer.chat_template:
         messages = [{"role": "user", "content": prompt}]
         final_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     else:
         final_prompt = prompt
 
+    # Gọi model
     raw = run_mlx(final_prompt, max_tokens=100)
 
-    # Cố gắng trích xuất JSON từ phản hồi
+    # Parse JSON
     try:
         start = raw.find("{")
         end = raw.rfind("}") + 1
         if start != -1 and end != -1:
-            json_str = raw[start:end]
-            return json.loads(json_str)
-        else:
-            return {"intent": "RELATION", "keyword": question}
+            return json.loads(raw[start:end])
     except:
-        return {"intent": "RELATION", "keyword": question}
+        pass
+    
+    # Mặc định nếu lỗi
+    return {"intent": "RELATION", "keyword": question, "hops": 1}
 
 # --- 5. RAG ANSWERING ---
 
-def generate_rag_response(question):
-    # 1. Router
-    analysis = detect_intent_and_keyword(question)
+def get_answer(question):
+    # A. Router Phase
+    analysis = analyze_question(question)
     intent = analysis.get("intent", "RELATION")
     keyword = analysis.get("keyword", question)
+    hops = analysis.get("hops", 1)
 
-    print(f"\n[DEBUG] Intent: {intent} | Keyword: {keyword}")
+    # Hiển thị Debug ra Sidebar để theo dõi
+    st.sidebar.markdown("### 🔍 Debug Lần Cuối")
+    st.sidebar.info(f"- **Intent:** `{intent}`\n- **Keyword:** `{keyword}`\n- **Hops:** `{hops}`")
 
-    # 2. Retriever
-    if intent == "SUMMARY":
-        context = query_summary(keyword)
-        if not context:
-            context = query_relations(keyword)
-            intent = "RELATION (Fallback)"
-    else:
-        context = query_relations(keyword)
-
+    # B. Retriever Phase
+    context = get_context(keyword, intent, hops)
+    
     if not context:
         return "Xin lỗi, tôi không tìm thấy thông tin trong cơ sở dữ liệu."
 
-    # 3. Generator
-    db_context = f"""THÔNG TIN TỪ CƠ SỞ DỮ LIỆU ({intent}):
----------------------
+    # C. Generator Phase
+    instruction = ""
+    if hops >= 2:
+        instruction = "\nHướng dẫn: Hãy suy luận bắc cầu (Ví dụ: A là cha B, B là cha C => A là ông nội C) để trả lời."
+
+    prompt_rag = f"""DỮ LIỆU TRI THỨC:
+----------------
 {context}
----------------------"""
+----------------
 
-    user_prompt = f"{db_context}\n\nDựa vào thông tin trên, hãy trả lời câu hỏi: {question}\nTrả lời ngắn gọn:"
+Câu hỏi: {question}
+{instruction}
+Trả lời ngắn gọn:"""
 
-    if hasattr(tokenizer, "apply_chat_template") and tokenizer.chat_template:
-        messages = [
-            {"role": "system", "content": "Bạn là trợ lý lịch sử Việt Nam trung thực. Chỉ trả lời dựa trên thông tin được cung cấp."},
-            {"role": "user", "content": user_prompt},
-        ]
-        final_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    else:
-        final_prompt = user_prompt
-
-    # Tăng max_tokens cho câu trả lời cuối cùng
-    answer = run_mlx(final_prompt, max_tokens=512)
-    return answer.strip()
+    return run_mlx(prompt_rag, DEFAULT_MAX_TOKENS).strip()
 
 # --- 6. CHAT LOOP ---
 def start_chat():

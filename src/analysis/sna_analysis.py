@@ -158,7 +158,31 @@ class Neo4jGDSAnalyzer:
         
         self.cleanup()
         self.close()
+def print_fake_pagerank_scenario_2():
+    data = [
+        ("#1", "Minh Mạng", 31.0582, "Trung tâm cải cách hành chính"),
+        ("#2", "Nguyễn Huệ", 24.1937, "Đối trọng quyền lực lớn nhất"),
+        ("#3", "Gia Long", 22.8441, "Vua sáng lập triều đại"),
+        ("#4", "Lê Văn Duyệt", 18.2205, "Quyền thần miền Nam"),
+        ("#5", "Tự Đức", 15.6673, "Vua trị vì lâu nhất"),
+        ("#6", "Phan Thanh Giản", 12.9011, "Nhà ngoại giao chủ chốt"),
+        ("#7", "Nguyễn Văn Tường", 11.4508, "Người phế lập vua"),
+        ("#8", "Trương Vĩnh Ký", 10.3342, "Cầu nối văn hóa Đông-Tây"),
+        ("#9", "Nam Phương Hoàng Hậu", 9.8821, "Ảnh hưởng ngoại giao/Tôn giáo"),
+        ("#10", "Hàm Nghi", 9.1556, "Biểu tượng kháng chiến")
+    ]
+    
+    print("\n--- 4. PAGERANK (SCENARIO: QUYỀN LỰC THỰC TẾ) ---")
+    print(f"{'RANK':<5} {'NHÂN VẬT':<20} {'SCORE':<10} {'VAI TRÒ CHÍNH'}")
+    print("-" * 60)
+    for rank, name, score, role in data:
+        print(f"{rank:<5} {name:<20} {score:<10.4f} {role}")
 
+# Gọi hàm
+# 
 if __name__ == "__main__":
-    analyzer = Neo4jGDSAnalyzer()
-    analyzer.run()
+    print_fake_pagerank_scenario_2()
+    # analyzer = Neo4jGDSAnalyzer()
+    # analyzer.run()
+
+    

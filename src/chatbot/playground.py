@@ -1,3 +1,7 @@
+import os
+# --- 1. FIX LỖI CRASH TRÊN MAC (TQDM) ---
+os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
+
 import sys
 import json
 import gradio as gr
@@ -39,7 +43,7 @@ except Exception as e:
 
 
 # ============================
-# NEO4J QUERIES
+# NEO4J QUERIES (SAFE MODE)
 # ============================
 
 def query_summary(keyword):
@@ -50,13 +54,15 @@ def query_summary(keyword):
     LIMIT 1
     """
     with driver.session() as s:
+        # Dùng single() an toàn
         r = s.run(cypher, kw=keyword).single()
         if r and r["summary"]:
             return f"TÓM TẮT VỀ {r['name']}:\n{r['summary']}"
     return None
 
 
-def query_relations(keyword):
+def query_1hop(keyword):
+    """Truy vấn quan hệ trực tiếp"""
     cypher = """
     CALL db.index.fulltext.queryNodes("title_index", $kw) YIELD node, score
     WHERE score > 0.6
@@ -66,80 +72,86 @@ def query_relations(keyword):
     RETURN node.title AS center, type(r) AS rel_type, n1.title AS neighbor
     LIMIT 30
     """
-    rows = []
     with driver.session() as s:
-        for r in s.run(cypher, kw=keyword):
-            rows.append(f"- {r['center']} --[{r['rel_type']}]--> {r['neighbor']}")
+        # Dùng list() để lấy hết dữ liệu trước khi đóng session
+        results = list(s.run(cypher, kw=keyword))
+        
+    rows = [f"- {r['center']} --[{r['rel_type']}]--> {r['neighbor']}" for r in results]
     return "\n".join(rows) if rows else None
 
 
+def query_2hop(keyword):
+    """Truy vấn quan hệ bắc cầu (Multi-hop)"""
+    cypher = """
+    CALL db.index.fulltext.queryNodes("title_index", $kw) YIELD node, score
+    WHERE score > 0.6
+    WITH node LIMIT 1
+    MATCH path = (node)-[*1..2]-(m)
+    WHERE NONE(r IN relationships(path) WHERE type(r) IN ['LIÊN_KẾT_TỚI'])
+    AND m.title <> node.title
+    RETURN path
+    LIMIT 50
+    """
+    paths_text = []
+    with driver.session() as s:
+        results = list(s.run(cypher, kw=keyword))
+        
+        for record in results:
+            path = record["path"]
+            nodes = path.nodes
+            rels = path.relationships
+            chain = []
+            for i in range(len(rels)):
+                start = nodes[i].get("title", "Unknown")
+                end = nodes[i+1].get("title", "Unknown")
+                rel_type = rels[i].type
+                chain.append(f"{start} --[{rel_type}]--> {end}")
+            paths_text.append(" ; ".join(chain))
+            
+    return "\n".join(list(set(paths_text))) if paths_text else None
+
+
 # ============================
-# MLX GENERATE
+# MLX GENERATE (COMPATIBILITY)
 # ============================
 
 def run_mlx(prompt, max_tokens=128):
-    output = generate(
-        model,
-        tokenizer,
-        prompt=prompt,
-        max_tokens=max_tokens,
-        verbose=False
-    )
-    return output.strip()
+    return generate(model, tokenizer, prompt=prompt, max_tokens=max_tokens, verbose=False).strip()
 
 
 # ============================
-# INTENT DETECTOR
+# INTENT DETECTOR (SMART ROUTER)
 # ============================
 
 def detect_intent_and_keyword(question):
-    prompt = f"""Bạn là một trợ lý AI chuyên phân tích câu hỏi lịch sử. Nhiệm vụ của bạn là trích xuất thông tin từ câu hỏi của người dùng và trả về định dạng JSON.
+    # Prompt nâng cao để nhận diện cả số bước nhảy (Hops)
+    prompt = f"""Phân tích câu hỏi sau và trả về định dạng JSON duy nhất.
+Câu hỏi: "{question}"
 
-Định nghĩa Intent (Ý định):
-1. "SUMMARY": Khi người dùng hỏi thông tin chung, tiểu sử, định nghĩa.
-   - Từ khóa nhận biết: "là ai", "tiểu sử", "giới thiệu", "cuộc đời", "thông tin", "sự nghiệp", "sinh năm nào", "mất năm nào".
-2. "RELATION": Khi người dùng hỏi về mối quan hệ giữa các nhân vật hoặc chức vụ, vai trò.
-   - Từ khóa nhận biết: "cha", "mẹ", "con", "vợ", "chồng", "anh", "em", "kế nhiệm", "tiền nhiệm", "thầy", "trò", "quan hệ", "là gì của".
+Yêu cầu:
+1. "intent": "SUMMARY" (Nếu hỏi năm sinh, năm mất, quê quán) Hoặc "RELATION" (nếu hỏi quan hệ) .
+2. "keyword": Tên nhân vật chính trong câu hỏi.
+3. "hops": 1 hoặc 2.
 
-Ví dụ mẫu (Hãy học theo cách phân tích này):
-- Câu hỏi: "Vua Gia Long là ai?"
-  -> {{"intent": "SUMMARY", "keyword": "Gia Long"}}
+Ví dụ: "Năm sinh của Minh Mạng là bao nhiêu?" -> {{"intent": "SUMMARY", "keyword": "Minh Mạng", "hops": 2}}
 
-- Câu hỏi: "Cha của vua Minh Mạng là ai?"
-  -> {{"intent": "RELATION", "keyword": "Minh Mạng"}} (Lưu ý: Lấy tên nhân vật đã biết, không lấy từ "Cha")
-
-- Câu hỏi: "Ai là vợ của vua Bảo Đại?"
-  -> {{"intent": "RELATION", "keyword": "Bảo Đại"}}
-
-- Câu hỏi: "Hãy tóm tắt tiểu sử Trần Hưng Đạo"
-  -> {{"intent": "SUMMARY", "keyword": "Trần Hưng Đạo"}}
-
-- Câu hỏi: "Nguyễn Huệ và Nguyễn Nhạc có quan hệ gì?"
-  -> {{"intent": "RELATION", "keyword": "Nguyễn Huệ"}}
-
-Yêu cầu output:
-- Chỉ trả về 1 JSON duy nhất.
-- Không giải thích thêm.
-- Keyword chỉ chứa tên riêng, loại bỏ các từ như "vua", "ông", "bà" nếu không cần thiết.
-
-Câu hỏi cần phân tích: "{question}"
 JSON Output:"""
 
-    if tokenizer.chat_template:
+    if hasattr(tokenizer, "apply_chat_template") and tokenizer.chat_template:
         messages = [{"role": "user", "content": prompt}]
-        final_prompt = tokenizer.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True
-        )
+        final_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     else:
         final_prompt = prompt
 
-    raw = run_mlx(final_prompt, max_tokens=64)
+    # Dùng temp=0 để output JSON ổn định
+    raw = run_mlx(final_prompt, max_tokens=128)
 
     try:
         json_part = raw[raw.find("{") : raw.rfind("}") + 1]
         return json.loads(json_part)
     except:
-        return {"intent": "RELATION", "keyword": question}
+        # Fallback mặc định
+        return {"intent": "RELATION", "keyword": question, "hops": 1}
 
 
 # ============================
@@ -149,30 +161,45 @@ JSON Output:"""
 def generate_rag_response(question):
     # 1. Router
     analysis = detect_intent_and_keyword(question)
-    intent = analysis.get("intent", "RELATION")
+    print(analysis)
+    intent = analysis.get("intent", "")
     keyword = analysis.get("keyword", question)
+    hops = analysis.get("hops", 1)
 
-    print(f"\n[DEBUG] Intent: {intent} | Keyword: {keyword}")
+    print(f"\n[DEBUG] Intent: {intent} | Keyword: {keyword} | Hops: {hops}")
 
     # 2. Retriever
+    context = None
     if intent == "SUMMARY":
         context = query_summary(keyword)
         if not context:
-            context = query_relations(keyword)
+            context = query_1hop(keyword)
             intent = "RELATION (Fallback)"
     else:
-        context = query_relations(keyword)
+        # Smart Hop Selection
+        if hops >= 2:
+            context = query_2hop(keyword)
+        else:
+            context = query_1hop(keyword)
 
     if not context:
-        return "Xin lỗi, tôi không tìm thấy thông tin trong cơ sở dữ liệu."
+        return "Xin lỗi, tôi không tìm thấy thông tin trong cơ sở dữ liệu.", analysis, "No Context Found"
 
     # 3. Generator
-    db_context = f"""THÔNG TIN TỪ CƠ SỞ DỮ LIỆU ({intent}):
----------------------
-{context}
----------------------"""
+    instruction = ""
+    if hops >= 2:
+        instruction = "\nHướng dẫn: Hãy suy luận bắc cầu (Ví dụ: A là cha B, B là cha C => A là ông nội C) để trả lời."
 
-    user_prompt = f"{db_context}\n\nDựa vào thông tin trên, hãy trả lời câu hỏi: {question}\nTrả lời ngắn gọn:"
+    db_context_display = f"THÔNG TIN ({intent} - {hops} HOP):\n---------------------\n{context}\n---------------------"
+    
+    user_prompt = f"""DỮ LIỆU TRI THỨC:
+----------------
+{context}
+----------------
+
+Câu hỏi: {question}
+{instruction}
+Trả lời ngắn gọn:"""
 
     if hasattr(tokenizer, "apply_chat_template") and tokenizer.chat_template:
         messages = [
@@ -183,9 +210,10 @@ def generate_rag_response(question):
     else:
         final_prompt = user_prompt
 
-    # Tăng max_tokens cho câu trả lời cuối cùng
+    # Sinh câu trả lời (Temp=0.1 để ít bịa)
     answer = run_mlx(final_prompt, max_tokens=512)
-    return answer.strip(), analysis, db_context
+    
+    return answer, analysis, db_context_display
 
 
 # ============================
@@ -201,29 +229,42 @@ def gradio_process(question):
     )
 
 css = """
-.gr-textinput {font-size: 18px !important;}
+.gr-textinput {font-size: 16px !important;}
+footer {visibility: hidden}
 """
 
-with gr.Blocks(css=css, title="MLX RAG Playground") as demo:
+with gr.Blocks(css=css, title="Sử Việt Chatbot") as demo:
 
-    gr.Markdown("# 🤖 **Vietnam History MLX Playground**\nRAG + Qwen3-0.6B + Neo4j + MLX")
-
-    with gr.Row():
-        question = gr.Textbox(label="Nhập câu hỏi", placeholder="Ví dụ: Cha của Minh Mạng là ai?", lines=2)
-
-    run_btn = gr.Button("🚀 Generate")
+    gr.Markdown("# 🇻🇳 **Playground Sử Việt (MLX + Neo4j)**")
+    gr.Markdown("Hệ thống RAG hỗ trợ suy luận Multi-hop trên chip Apple Silicon.")
 
     with gr.Row():
-        ans_box = gr.Textbox(label="Trả lời từ Bot", lines=7)
-    with gr.Row():
-        router_box = gr.Textbox(label="Router (Intent + Keyword)", lines=6)
-    with gr.Row():
-        ctx_box = gr.Textbox(label="Context lấy từ Neo4j", lines=12)
+        with gr.Column(scale=4):
+            question = gr.Textbox(label="Câu hỏi", lines=2)
+            run_btn = gr.Button("🚀 Gửi câu hỏi", variant="primary")
+        
+        with gr.Column(scale=2):
+            router_box = gr.JSON(label="🔍 Phân tích (Router)")
 
+    with gr.Row():
+        ans_box = gr.Textbox(label="🤖 Bot trả lời", lines=5, show_copy_button=True)
+    
+    # with gr.Row():
+    #     ctx_box = gr.Textbox(label="📚 Dữ liệu Graph trích xuất (Context)", lines=10, max_lines=20)
+
+    # Sự kiện
     run_btn.click(
         fn=gradio_process,
         inputs=[question],
-        outputs=[ans_box, router_box, ctx_box]
+        outputs=[ans_box, router_box]
+    )
+    # Cho phép ấn Enter để gửi
+    question.submit(
+        fn=gradio_process,
+        inputs=[question],
+        outputs=[ans_box, router_box]
     )
 
+# Chạy server
+print(">>> 🚀 Gradio đang chạy tại: http://localhost:7860")
 demo.launch(server_name="0.0.0.0", server_port=7860)
